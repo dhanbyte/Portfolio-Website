@@ -1,10 +1,25 @@
 "use client"
 
 import type React from "react"
-import { MessageCircle, Video, Code, Globe } from "lucide-react"
+import {
+  MessageCircle,
+  Video,
+  Code,
+  Globe,
+  Star,
+  Check,
+  Zap,
+  ArrowDown,
+  Github,
+  Linkedin,
+  Mail,
+  ExternalLink,
+  Download,
+  Moon,
+  Sun,
+} from "lucide-react"
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { ArrowDown, Github, Linkedin, Mail, ExternalLink, Download, Moon, Sun, Star, Check, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -67,7 +82,7 @@ const ThemeToggle = () => {
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="fixed top-4 right-4 z-50 bg-background/80 backdrop-blur-sm border"
+      className="fixed top-4 right-4 z-50 bg-background/80 backdrop-blur-sm border hover:bg-accent"
       title={`Switch to ${resolvedTheme === "dark" ? "light" : "dark"} mode`}
     >
       {resolvedTheme === "dark" ? (
@@ -91,61 +106,61 @@ export default function Portfolio() {
   const skills = [
     {
       name: "React.js",
-      description: "Building interactive user interfaces with modern React patterns and hooks",
+      description: "Building interactive user interfaces with modern React patterns, hooks, and state management",
       category: "Frontend",
       icon: "⚛️",
     },
     {
       name: "Next.js",
-      description: "Full-stack React framework for production-ready applications",
+      description: "Full-stack React framework for production-ready applications with SSR and SSG",
       category: "Frontend",
       icon: "🔺",
     },
     {
       name: "TypeScript",
-      description: "Type-safe JavaScript development for scalable applications",
+      description: "Type-safe JavaScript development for scalable and maintainable applications",
       category: "Frontend",
       icon: "📘",
     },
     {
       name: "Node.js",
-      description: "Server-side JavaScript runtime for building scalable backend services",
+      description: "Server-side JavaScript runtime for building scalable backend services and APIs",
       category: "Backend",
       icon: "🟢",
     },
     {
       name: "Express.js",
-      description: "Fast and minimalist web framework for Node.js applications",
+      description: "Fast and minimalist web framework for Node.js applications and REST APIs",
       category: "Backend",
       icon: "🚀",
     },
     {
       name: "MongoDB",
-      description: "NoSQL database for flexible and scalable data storage",
+      description: "NoSQL database for flexible and scalable data storage with document-based structure",
       category: "Database",
       icon: "🍃",
     },
     {
       name: "PostgreSQL",
-      description: "Advanced relational database for complex data operations",
+      description: "Advanced relational database for complex data operations and ACID compliance",
       category: "Database",
       icon: "🐘",
     },
     {
       name: "AWS",
-      description: "Cloud computing services for deployment and scaling",
+      description: "Cloud computing services for deployment, scaling, and infrastructure management",
       category: "Cloud",
       icon: "☁️",
     },
     {
       name: "Video Editing",
-      description: "Professional video editing for weddings, events, and promotional content",
+      description: "Professional video editing for weddings, events, and promotional content creation",
       category: "Creative",
       icon: "🎬",
     },
     {
       name: "Adobe Premiere Pro",
-      description: "Advanced video editing and post-production workflows",
+      description: "Advanced video editing and post-production workflows with color correction",
       category: "Creative",
       icon: "🎞️",
     },
@@ -154,39 +169,55 @@ export default function Portfolio() {
   const services = [
     {
       title: "Full-Stack Development",
-      description: "Complete web application development from frontend to backend",
+      description: "Complete web application development from frontend to backend with modern technologies",
       icon: <Code className="h-8 w-8" />,
       features: [
-        "React/Next.js Frontend",
-        "Node.js Backend",
-        "Database Design",
-        "API Development",
-        "Deployment & Hosting",
-      ],
-    },
-    {
-      title: "Frontend Development",
-      description: "Modern, responsive user interfaces with latest technologies",
-      icon: <Globe className="h-8 w-8" />,
-      features: [
-        "Responsive Design",
-        "React/Next.js",
-        "TypeScript",
-        "UI/UX Implementation",
+        "React/Next.js Frontend Development",
+        "Node.js Backend Architecture",
+        "Database Design & Integration",
+        "RESTful API Development",
+        "Cloud Deployment & Hosting",
         "Performance Optimization",
       ],
     },
     {
-      title: "Backend Development",
-      description: "Robust server-side applications and API development",
-      icon: <Zap className="h-8 w-8" />,
-      features: ["RESTful APIs", "Database Design", "Authentication", "Server Deployment", "Performance Optimization"],
+      title: "Frontend Development",
+      description: "Modern, responsive user interfaces with latest technologies and best practices",
+      icon: <Globe className="h-8 w-8" />,
+      features: [
+        "Responsive Web Design",
+        "React/Next.js Applications",
+        "TypeScript Implementation",
+        "UI/UX Implementation",
+        "Performance Optimization",
+        "Cross-browser Compatibility",
+      ],
     },
     {
-      title: "Video Editing",
-      description: "Professional video editing for all types of content",
+      title: "Backend Development",
+      description: "Robust server-side applications and API development with scalable architecture",
+      icon: <Zap className="h-8 w-8" />,
+      features: [
+        "RESTful API Development",
+        "Database Design & Management",
+        "User Authentication & Authorization",
+        "Server Deployment & Configuration",
+        "Performance Optimization",
+        "Security Implementation",
+      ],
+    },
+    {
+      title: "Video Editing Services",
+      description: "Professional video editing for all types of content with cinematic quality",
       icon: <Video className="h-8 w-8" />,
-      features: ["Wedding Videos", "Event Coverage", "Promotional Videos", "Social Media Content", "Color Correction"],
+      features: [
+        "Wedding Video Editing",
+        "Event Coverage & Highlights",
+        "Promotional Video Creation",
+        "Social Media Content",
+        "Color Correction & Grading",
+        "Motion Graphics & Effects",
+      ],
     },
   ]
 
@@ -194,46 +225,57 @@ export default function Portfolio() {
     {
       name: "Basic Website",
       price: "₹15,000",
-      description: "Perfect for small businesses and personal portfolios",
+      duration: "Starting from",
+      description: "Perfect for small businesses, portfolios, and personal websites",
       features: [
-        "Responsive Design",
+        "Responsive Design (Mobile & Desktop)",
         "Up to 5 Pages",
-        "Contact Form",
-        "Basic SEO",
-        "1 Month Support",
+        "Contact Form Integration",
+        "Basic SEO Optimization",
+        "1 Month Free Support",
         "Mobile Optimized",
+        "Fast Loading Speed",
+        "Social Media Integration",
       ],
       popular: false,
+      color: "from-blue-500 to-blue-600",
     },
     {
       name: "Full-Stack Application",
       price: "₹45,000",
-      description: "Complete web application with backend functionality",
+      duration: "Starting from",
+      description: "Complete web application with backend functionality and database",
       features: [
         "Custom Web Application",
         "Database Integration",
-        "User Authentication",
-        "Admin Panel",
-        "API Development",
-        "3 Months Support",
-        "Deployment Included",
+        "User Authentication System",
+        "Admin Panel Dashboard",
+        "RESTful API Development",
+        "3 Months Free Support",
+        "Cloud Deployment Included",
+        "Performance Optimization",
+        "Security Implementation",
       ],
       popular: true,
+      color: "from-purple-500 to-purple-600",
     },
     {
       name: "Video Editing Package",
       price: "₹8,000",
-      description: "Professional video editing services",
+      duration: "Per project",
+      description: "Professional video editing services for all types of content",
       features: [
         "Wedding Video Editing",
-        "Color Correction",
+        "Color Correction & Grading",
         "Audio Enhancement",
-        "Motion Graphics",
-        "Multiple Formats",
+        "Motion Graphics & Titles",
+        "Multiple Format Export",
         "Unlimited Revisions",
-        "Fast Delivery",
+        "Fast 3-5 Day Delivery",
+        "Raw Footage Organization",
       ],
       popular: false,
+      color: "from-green-500 to-green-600",
     },
   ]
 
@@ -244,7 +286,7 @@ export default function Portfolio() {
       description:
         "A comprehensive web platform for Sant Shri Ashram Ji Gurukul to manage courses, teachers, events, gallery, and online admissions with a public site and admin panel.",
       image: "https://ik.imagekit.io/b5qewhvhb/Sant%20Shri%20Asharamji%20Gurukul/slide-3.png?updatedAt=1751782723813",
-      tech: ["Next.js", "Node.js", "MongoDB", "Stripe"],
+      tech: ["Next.js", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
       category: "Full-Stack",
       github: "https://github.com/dhanbyte/Gurukul",
       live: "https://amdgurukul.ashram.org/",
@@ -252,12 +294,12 @@ export default function Portfolio() {
     },
     {
       id: 2,
-      title: "Akhil Graphic",
+      title: "Akhil Graphic Design Studio",
       description:
-        "Professional portfolio website showcasing graphic design services, past work, client testimonials, and custom design order system.",
+        "Professional portfolio website showcasing graphic design services, past work, client testimonials, and custom design order system with modern UI.",
       image:
         "https://ik.imagekit.io/b5qewhvhb/Sant%20Shri%20Asharamji%20Gurukul/Screenshot%202025-07-14%20164949.png?updatedAt=1752492010793",
-      tech: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io"],
+      tech: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io", "Framer Motion"],
       category: "Full-Stack",
       github: "https://github.com/dhanbyte/Akhil-Graphic-FirstPage_Frontend",
       live: "https://akhil-graphic-first-page-frontend.vercel.app/",
@@ -265,12 +307,12 @@ export default function Portfolio() {
     },
     {
       id: 3,
-      title: "HouseCloud",
+      title: "HouseCloud Real Estate",
       description:
-        "Modern real estate platform for browsing, filtering, and exploring property listings with detailed descriptions and smooth property discovery.",
+        "Modern real estate platform for browsing, filtering, and exploring property listings with detailed descriptions, image galleries, and smooth property discovery experience.",
       image:
         "https://ik.imagekit.io/b5qewhvhb/Sant%20Shri%20Asharamji%20Gurukul/Screenshot%202025-07-14%20165838.png?updatedAt=1752492590715",
-      tech: ["Next.js", "Node.js", "Express", "Redis"],
+      tech: ["Next.js", "Node.js", "Express", "Redis", "Tailwind CSS"],
       category: "Frontend",
       github: "https://github.com/dhanbyte",
       live: "https://housecloud-frontend.vercel.app/",
@@ -279,10 +321,11 @@ export default function Portfolio() {
     {
       id: 4,
       title: "Shrikrishna Traders",
-      description: "Business website for Shrikrishna Traders with product showcase, services, and contact information.",
+      description:
+        "Professional business website for Shrikrishna Traders with product showcase, services information, company profile, and integrated contact system.",
       image:
         "https://ik.imagekit.io/b5qewhvhb/Sant%20Shri%20Asharamji%20Gurukul/Screenshot%202025-07-14%20170638.png?updatedAt=1752493079798",
-      tech: ["Next.js", "Prisma", "PostgreSQL", "Mapbox"],
+      tech: ["Next.js", "Prisma", "PostgreSQL", "Mapbox", "Stripe"],
       category: "Full-Stack",
       github: "https://github.com/dhanbyte",
       live: "https://www.shrikrishnatraders.in/",
@@ -291,10 +334,11 @@ export default function Portfolio() {
     {
       id: 5,
       title: "Real-time Chat Application",
-      description: "Modern chat application with real-time messaging, user authentication, and responsive design.",
+      description:
+        "Modern chat application with real-time messaging, user authentication, group chats, file sharing, and responsive design for seamless communication.",
       image:
         "https://ik.imagekit.io/b5qewhvhb/Sant%20Shri%20Asharamji%20Gurukul/Screenshot%202025-07-14%20171155.png?updatedAt=1752493365555",
-      tech: ["Node.js", "Express", "Socket.io", "JWT"],
+      tech: ["Node.js", "Express", "Socket.io", "JWT", "MongoDB"],
       category: "Backend",
       github: "https://github.com/dhanbyte/chat-app",
       live: "",
@@ -302,12 +346,12 @@ export default function Portfolio() {
     },
     {
       id: 6,
-      title: "Lakshmi Digital",
+      title: "Lakshmi Digital Wedding",
       description:
-        "Personalized wedding website sharing love story, event schedule, RSVP form, photo gallery, venue details, and live updates for guests.",
+        "Personalized wedding website sharing couple's love story, event schedule, RSVP form, photo gallery, venue details, and live updates for guests with elegant design.",
       image:
         "https://ik.imagekit.io/b5qewhvhb/Sant%20Shri%20Asharamji%20Gurukul/Screenshot%202025-07-14%20165225.png?updatedAt=1752492161904",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      tech: ["React", "Node.js", "MongoDB", "Stripe", "Framer Motion"],
       category: "Frontend",
       github: "https://github.com/dhanbyte/lakshmidigital",
       live: "https://lakshmidigital.vercel.app/",
@@ -320,9 +364,9 @@ export default function Portfolio() {
       id: 1,
       name: "Rajesh Kumar",
       company: "TechStart Solutions",
-      role: "Founder",
+      role: "Founder & CEO",
       content:
-        "Dhananjay delivered an exceptional e-commerce platform for our business. His attention to detail and technical expertise exceeded our expectations. The project was completed on time and within budget.",
+        "Dhananjay delivered an exceptional e-commerce platform for our business. His attention to detail and technical expertise exceeded our expectations. The project was completed on time and within budget. Highly recommended!",
       rating: 5,
       image: "/placeholder.svg?height=60&width=60",
     },
@@ -332,17 +376,17 @@ export default function Portfolio() {
       company: "Digital Marketing Agency",
       role: "Project Manager",
       content:
-        "Working with Dhananjay was a pleasure. He created a beautiful and functional website for our agency. His communication skills and problem-solving abilities are outstanding.",
+        "Working with Dhananjay was a pleasure. He created a beautiful and functional website for our agency. His communication skills and problem-solving abilities are outstanding. Will definitely work again.",
       rating: 5,
       image: "/placeholder.svg?height=60&width=60",
     },
     {
       id: 3,
       name: "Amit Patel",
-      company: "Wedding Planners",
-      role: "CEO",
+      company: "Wedding Planners Co.",
+      role: "Creative Director",
       content:
-        "Dhananjay edited our wedding videos beautifully. The final product was cinematic and captured all the emotions perfectly. Highly recommend his video editing services.",
+        "Dhananjay edited our wedding videos beautifully. The final product was cinematic and captured all the emotions perfectly. His video editing skills are top-notch. Highly recommend his services.",
       rating: 5,
       image: "/placeholder.svg?height=60&width=60",
     },
@@ -352,7 +396,7 @@ export default function Portfolio() {
       company: "Real Estate Firm",
       role: "Marketing Head",
       content:
-        "The property listing platform Dhananjay built for us has significantly improved our business operations. The user interface is intuitive and the backend is robust.",
+        "The property listing platform Dhananjay built for us has significantly improved our business operations. The user interface is intuitive and the backend is robust. Excellent technical skills.",
       rating: 5,
       image: "/placeholder.svg?height=60&width=60",
     },
@@ -362,7 +406,7 @@ export default function Portfolio() {
       company: "Educational Institute",
       role: "Director",
       content:
-        "Dhananjay created a comprehensive management system for our institute. The admin panel is user-friendly and the public website looks professional. Excellent work!",
+        "Dhananjay created a comprehensive management system for our institute. The admin panel is user-friendly and the public website looks professional. Delivered exactly what we needed.",
       rating: 5,
       image: "/placeholder.svg?height=60&width=60",
     },
@@ -406,8 +450,9 @@ export default function Portfolio() {
       >
         <Button
           onClick={handleWhatsAppContact}
-          className="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg"
+          className="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300"
           size="icon"
+          title="Contact via WhatsApp"
         >
           <MessageCircle className="h-6 w-6" />
         </Button>
@@ -422,48 +467,89 @@ export default function Portfolio() {
               animate={{ opacity: 1, x: 0 }}
               className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
             >
-              Dhananjay.me
+              Dhananjay
             </motion.div>
-            <div className="hidden md:flex space-x-8">
-              {["Home", "About", "Services", "Skills", "Projects", "Pricing", "Testimonials", "Contact"].map((item) => (
+            <div className="hidden md:flex items-center md:pr-[4vw]  space-x-8">
+              {[
+                "Home",
+                "About",
+                "Services",
+                "Skills",
+                "Projects",
+                "Pricing",
+                "Testimonials",
+                "Contact",
+              ].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="hover:text-blue-600 transition-colors duration-200"
+                  className="hover:text-blue-600 transition-colors duration-200 font-medium"
                 >
                   {item}
                 </button>
               ))}
+            </div>
+            <div className="md:hidden pr-[8vw] flex items-center space-x-2">
+              <Button variant="ghost" size="sm">
+                Menu
+              </Button>
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center pt-20">
+      <section
+        id="home"
+        className="min-h-screen flex items-center justify-center pt-20"
+      >
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Hi, I'm{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Dhananjay
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Full-Stack Developer & Video Editor who creates modern web applications and cinematic videos
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+              Full-Stack Developer & Video Editor who creates modern web
+              applications and cinematic videos that bring ideas to life
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <Button
                 size="lg"
                 onClick={() => scrollToSection("projects")}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3"
               >
                 View My Work
               </Button>
-              <Button variant="outline" size="lg" onClick={handleWhatsAppContact}>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={handleWhatsAppContact}
+                className="px-8 py-3 bg-transparent"
+              >
                 <MessageCircle className="mr-2 h-4 w-4" />
                 WhatsApp Me
               </Button>
+            </div>
+            <div className="flex justify-center space-x-6 text-muted-foreground">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">15+</div>
+                <div className="text-sm">Projects</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">10+</div>
+                <div className="text-sm">Happy Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">2+</div>
+                <div className="text-sm">Years Experience</div>
+              </div>
             </div>
           </motion.div>
           <motion.div
@@ -472,7 +558,10 @@ export default function Portfolio() {
             transition={{ delay: 1, duration: 0.8 }}
             className="mt-16"
           >
-            <ArrowDown className="mx-auto animate-bounce text-muted-foreground" size={24} />
+            <ArrowDown
+              className="mx-auto animate-bounce text-muted-foreground"
+              size={24}
+            />
           </motion.div>
         </div>
       </section>
@@ -488,8 +577,9 @@ export default function Portfolio() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4">About Me</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Passionate full-stack developer and video editor with 2+ years of experience creating digital experiences
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Passionate full-stack developer and video editor with 2+ years of
+              experience creating digital experiences that make a difference
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -501,23 +591,43 @@ export default function Portfolio() {
             >
               <div className="space-y-6">
                 <p className="text-lg leading-relaxed">
-                  I'm a dedicated full-stack developer and creative video editor who loves bringing ideas to life
-                  through code and visual storytelling. With expertise in modern web technologies and professional video
-                  editing, I've successfully delivered projects for 10+ clients across various industries.
+                  I'm a dedicated full-stack developer and creative video editor
+                  who loves bringing ideas to life through code and visual
+                  storytelling. With expertise in modern web technologies and
+                  professional video editing, I've successfully delivered
+                  projects for 10+ clients across various industries.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  My journey combines technical excellence with creative vision. I specialize in React, Node.js, cloud
-                  technologies, and professional video editing including wedding cinematography. I stay updated with the
-                  latest industry trends to deliver cutting-edge solutions.
+                  My journey combines technical excellence with creative vision.
+                  I specialize in React, Node.js, cloud technologies, and
+                  professional video editing including wedding cinematography. I
+                  stay updated with the latest industry trends to deliver
+                  cutting-edge solutions that exceed expectations.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Badge variant="secondary">10+ Happy Clients</Badge>
-                  <Badge variant="secondary">15+ Projects Completed</Badge>
-                  <Badge variant="secondary">2+ Years Experience</Badge>
-                  <Badge variant="secondary">Wedding Video Specialist</Badge>
+                  <Badge variant="secondary" className="px-3 py-1">
+                    10+ Happy Clients
+                  </Badge>
+                  <Badge variant="secondary" className="px-3 py-1">
+                    15+ Projects Completed
+                  </Badge>
+                  <Badge variant="secondary" className="px-3 py-1">
+                    2+ Years Experience
+                  </Badge>
+                  <Badge variant="secondary" className="px-3 py-1">
+                    Wedding Video Specialist
+                  </Badge>
                 </div>
-                <a href="/Dhananjay-Resume.pdf" download target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" className="mt-4 bg-transparent">
+                <a
+                  href="/Dhananjay-Resume.pdf"
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    variant="outline"
+                    className="mt-4 bg-transparent hover:bg-accent"
+                  >
                     <Download className="mr-2 h-4 w-4" />
                     Download Resume
                   </Button>
@@ -537,6 +647,7 @@ export default function Portfolio() {
                     className="rounded-2xl object-cover w-full h-[70vh] object-center"
                     src="https://ik.imagekit.io/b5qewhvhb/Sant%20Shri%20Asharamji%20Gurukul/WhatsApp%20Image%202025-07-14%20at%2017.21.55_a1d0f602.jpg?updatedAt=1752496047601"
                     alt="Dhananjay - Full Stack Developer & Video Editor"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -556,8 +667,9 @@ export default function Portfolio() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4">My Services</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive digital solutions from web development to video editing
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Comprehensive digital solutions from web development to video
+              editing
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -569,13 +681,15 @@ export default function Portfolio() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                <Card className="h-full hover:shadow-lg transition-all duration-300 group">
                   <CardHeader className="text-center">
-                    <div className="mx-auto mb-4 p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white w-fit">
+                    <div className="mx-auto mb-4 p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white w-fit group-hover:scale-110 transition-transform duration-300">
                       {service.icon}
                     </div>
                     <CardTitle className="text-xl">{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
+                    <CardDescription className="text-base">
+                      {service.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
@@ -605,7 +719,7 @@ export default function Portfolio() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4">Skills & Technologies</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Technologies and tools I use to bring ideas to life
             </p>
           </motion.div>
@@ -618,16 +732,22 @@ export default function Portfolio() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                <Card className="h-full hover:shadow-lg transition-all duration-300 group">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="text-3xl">{skill.icon}</div>
+                      <div className="text-3xl group-hover:scale-110 transition-transform duration-300">
+                        {skill.icon}
+                      </div>
                       <div className="flex-1">
                         <div className="flex justify-between items-center mb-2">
-                          <h3 className="font-semibold text-lg">{skill.name}</h3>
+                          <h3 className="font-semibold text-lg">
+                            {skill.name}
+                          </h3>
                           <Badge variant="outline">{skill.category}</Badge>
                         </div>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{skill.description}</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {skill.description}
+                        </p>
                       </div>
                     </div>
                   </CardContent>
@@ -649,7 +769,7 @@ export default function Portfolio() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               A showcase of my recent work and personal projects
             </p>
           </motion.div>
@@ -661,7 +781,11 @@ export default function Portfolio() {
                 key={category}
                 variant={activeFilter === category ? "default" : "outline"}
                 onClick={() => setActiveFilter(category)}
-                className={activeFilter === category ? "bg-gradient-to-r from-blue-600 to-purple-600" : ""}
+                className={
+                  activeFilter === category
+                    ? "bg-gradient-to-r from-blue-600 to-purple-600"
+                    : ""
+                }
               >
                 {category}
               </Button>
@@ -685,6 +809,7 @@ export default function Portfolio() {
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
                     />
                     {project.featured && (
                       <Badge className="absolute top-2 right-2 bg-gradient-to-r from-blue-600 to-purple-600">
@@ -697,20 +822,32 @@ export default function Portfolio() {
                       <span className="line-clamp-1">{project.title}</span>
                       <div className="flex gap-2 ml-2">
                         <Button size="icon" variant="ghost" asChild>
-                          <a href={project.github} target="_blank" rel="noopener noreferrer" title="View Source Code">
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="View Source Code"
+                          >
                             <Github className="h-4 w-4" />
                           </a>
                         </Button>
                         {project.live && (
                           <Button size="icon" variant="ghost" asChild>
-                            <a href={project.live} target="_blank" rel="noopener noreferrer" title="View Live Demo">
+                            <a
+                              href={project.live}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              title="View Live Demo"
+                            >
                               <ExternalLink className="h-4 w-4" />
                             </a>
                           </Button>
                         )}
                       </div>
                     </CardTitle>
-                    <CardDescription className="line-clamp-3">{project.description}</CardDescription>
+                    <CardDescription className="line-clamp-3">
+                      {project.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
@@ -739,8 +876,9 @@ export default function Portfolio() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4">Pricing Plans</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Transparent pricing for quality services. Choose the plan that fits your needs.
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Transparent pricing for quality services. Choose the plan that
+              fits your needs.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -752,16 +890,33 @@ export default function Portfolio() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className={`relative h-full ${plan.popular ? "border-blue-500 shadow-lg scale-105" : ""}`}>
+                <Card
+                  className={`relative h-full ${
+                    plan.popular ? "border-blue-500 shadow-lg scale-105" : ""
+                  }`}
+                >
                   {plan.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <Badge className="bg-gradient-to-r from-blue-600 to-purple-600">Most Popular</Badge>
+                      <Badge className="bg-gradient-to-r from-blue-600 to-purple-600">
+                        Most Popular
+                      </Badge>
                     </div>
                   )}
                   <CardHeader className="text-center">
                     <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                    <div className="text-4xl font-bold text-blue-600 my-4">{plan.price}</div>
-                    <CardDescription>{plan.description}</CardDescription>
+                    <div className="my-4">
+                      <div
+                        className={`text-4xl font-bold bg-gradient-to-r ${plan.color} bg-clip-text text-transparent`}
+                      >
+                        {plan.price}
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        {plan.duration}
+                      </div>
+                    </div>
+                    <CardDescription className="text-base">
+                      {plan.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="flex-1">
                     <ul className="space-y-3">
@@ -775,7 +930,11 @@ export default function Portfolio() {
                   </CardContent>
                   <div className="p-6 pt-0">
                     <Button
-                      className={`w-full ${plan.popular ? "bg-gradient-to-r from-blue-600 to-purple-600" : ""}`}
+                      className={`w-full ${
+                        plan.popular
+                          ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                          : ""
+                      }`}
                       onClick={handleWhatsAppContact}
                     >
                       Get Started
@@ -799,7 +958,9 @@ export default function Portfolio() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4">Client Testimonials</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">What my clients say about working with me</p>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              What my clients say about working with me
+            </p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -810,13 +971,14 @@ export default function Portfolio() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full">
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
                       <img
                         src={testimonial.image || "/placeholder.svg"}
                         alt={testimonial.name}
                         className="w-12 h-12 rounded-full mr-4"
+                        loading="lazy"
                       />
                       <div>
                         <h4 className="font-semibold">{testimonial.name}</h4>
@@ -825,10 +987,15 @@ export default function Portfolio() {
                         </p>
                       </div>
                     </div>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">"{testimonial.content}"</p>
+                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                      "{testimonial.content}"
+                    </p>
                     <div className="flex">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        <Star
+                          key={i}
+                          className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                        />
                       ))}
                     </div>
                   </CardContent>
@@ -850,8 +1017,9 @@ export default function Portfolio() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Ready to start your next project? Let's discuss how I can help bring your ideas to life.
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Ready to start your next project? Let's discuss how I can help
+              bring your ideas to life.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
@@ -864,31 +1032,42 @@ export default function Portfolio() {
               <Card>
                 <CardHeader>
                   <CardTitle>Send me a message</CardTitle>
-                  <CardDescription>I'll get back to you within 24 hours via WhatsApp</CardDescription>
+                  <CardDescription>
+                    I'll get back to you within 24 hours via WhatsApp
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <Input
                       placeholder="Your Name"
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                       required
                     />
                     <Input
                       type="email"
                       placeholder="Your Email"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                       required
                     />
                     <Textarea
                       placeholder="Your Message"
                       rows={5}
                       value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
+                      }
                       required
                     />
-                    <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-purple-600">
+                    <Button
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                    >
                       <MessageCircle className="mr-2 h-4 w-4" />
                       Send via WhatsApp
                     </Button>
@@ -908,25 +1087,37 @@ export default function Portfolio() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <Mail className="h-5 w-5 text-blue-600" />
-                    <a href="mailto:dhananjay.win2004@gmail.com" className="hover:text-blue-600">
+                    <a
+                      href="mailto:dhananjay.win2004@gmail.com"
+                      className="hover:text-blue-600 transition-colors"
+                    >
                       dhananjay.win2004@gmail.com
                     </a>
                   </div>
                   <div className="flex items-center space-x-4">
                     <MessageCircle className="h-5 w-5 text-green-600" />
-                    <a href="https://wa.me/919157499884" className="hover:text-green-600">
+                    <a
+                      href="https://wa.me/919157499884"
+                      className="hover:text-green-600 transition-colors"
+                    >
                       +91 9157499884 (WhatsApp)
                     </a>
                   </div>
                   <div className="flex items-center space-x-4">
                     <Github className="h-5 w-5 text-blue-600" />
-                    <a href="https://github.com/dhanbyte" className="hover:text-blue-600">
+                    <a
+                      href="https://github.com/dhanbyte"
+                      className="hover:text-blue-600 transition-colors"
+                    >
                       github.com/dhanbyte
                     </a>
                   </div>
                   <div className="flex items-center space-x-4">
                     <Linkedin className="h-5 w-5 text-blue-600" />
-                    <a href="https://linkedin.com/in/dhananjay-developer" className="hover:text-blue-600">
+                    <a
+                      href="https://linkedin.com/in/dhananjay-developer"
+                      className="hover:text-blue-600 transition-colors"
+                    >
                       linkedin.com/in/dhananjay-developer
                     </a>
                   </div>
@@ -946,8 +1137,9 @@ export default function Portfolio() {
               <div>
                 <h4 className="text-lg font-semibold mb-4">Response Time</h4>
                 <p className="text-muted-foreground">
-                  I typically respond to WhatsApp messages within 2-4 hours during business hours. For urgent projects,
-                  feel free to mention it in your message.
+                  I typically respond to WhatsApp messages within 2-4 hours
+                  during business hours. For urgent projects, feel free to
+                  mention it in your message.
                 </p>
               </div>
             </motion.div>
@@ -956,32 +1148,48 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t">
+      <footer className="py-12 border-t bg-background">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <p className="text-muted-foreground">
-                © 2024 Dhananjay.me - Full Stack Developer & Video Editor. All rights reserved.
+                © 2024 Dhananjay.me - Full Stack Developer & Video Editor. All
+                rights reserved.
               </p>
             </div>
             <div className="flex space-x-6">
               <Button variant="ghost" size="icon" asChild>
-                <a href="https://github.com/dhanbyte" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com/dhanbyte"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub"
+                >
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="https://linkedin.com/in/dhananjay-developer" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://linkedin.com/in/dhananjay-developer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="LinkedIn"
+                >
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="mailto:dhananjay.win2004@gmail.com">
+                <a href="mailto:dhananjay.win2004@gmail.com" title="Email">
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="https://wa.me/919157499884" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://wa.me/919157499884"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="WhatsApp"
+                >
                   <MessageCircle className="h-5 w-5" />
                 </a>
               </Button>
@@ -990,5 +1198,5 @@ export default function Portfolio() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
