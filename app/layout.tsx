@@ -489,7 +489,9 @@ export default function RootLayout({
             }),
           }}
         />
+        
       </head>
+      
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}

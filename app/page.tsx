@@ -619,6 +619,7 @@ export default function Portfolio() {
                   </Badge>
                 </div>
                 <a
+                type="file"
                   href="/Dhananjay-Resume.pdf"
                   download
                   target="_blank"
