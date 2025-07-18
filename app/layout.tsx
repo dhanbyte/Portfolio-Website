@@ -490,7 +490,8 @@ export default function RootLayout({
             }),
           }}
         />
-        
+        <link rel="icon" href="https://ik.imagekit.io/b5qewhvhb/Screenshot%202025-07-18%20093202.png?updatedAt=1752811510301" />
+
       </head>
       
       <body className={inter.className}>
