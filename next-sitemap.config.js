@@ -1,8 +1,8 @@
 /** @type {import('next-sitemap').IConfig} */
-const config = {
-  siteUrl: "https://dhananjay.me",
-  generateRobotsTxt: true,
-  sitemapSize: 7000,
-}
-
-module.exports = config
+export const siteUrl = "https://dhanbyte.me";
+export const generateRobotsTxt = true;
+export const generateIndexSitemap = true;
+export const changefreq = "daily";
+export const priority = 0.7;
+export const sitemapSize = 5000;
+export const exclude = ["/admin", "/404"];
