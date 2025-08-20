@@ -357,6 +357,42 @@ export default function Portfolio() {
       live: "https://lakshmidigital.vercel.app/",
       featured: true,
     },
+    {
+      id: 7,
+      title: "Bazaar Buddy",
+      description:
+        "E-commerce marketplace platform connecting buyers and sellers with modern shopping experience, product search, user authentication, and secure payment integration.",
+      image: "/placeholder.svg",
+      tech: ["React", "Next.js", "Node.js", "MongoDB", "Stripe"],
+      category: "Full-Stack",
+      github: "https://github.com/dhanbyte",
+      live: "https://bazaar-buddy-three.vercel.app/",
+      featured: false,
+    },
+    {
+      id: 8,
+      title: "Magalmay Website",
+      description:
+        "Professional business website with modern design, service portfolio, company information, and contact management system for enhanced online presence.",
+      image: "/placeholder.svg",
+      tech: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"],
+      category: "Frontend",
+      github: "https://github.com/dhanbyte",
+      live: "https://magalmay-website-project.vercel.app/",
+      featured: false,
+    },
+    {
+      id: 9,
+      title: "TeenFluencer",
+      description:
+        "Social media platform designed for teenage influencers with content creation tools, audience engagement features, and monetization opportunities.",
+      image: "/placeholder.svg",
+      tech: ["React", "Node.js", "Express", "PostgreSQL", "Socket.io"],
+      category: "Full-Stack",
+      github: "https://github.com/dhanbyte",
+      live: "https://teenfluencer.vercel.app/",
+      featured: false,
+    },
   ]
 
   const testimonials = [
@@ -540,7 +576,7 @@ export default function Portfolio() {
             </div>
             <div className="flex justify-center space-x-6 text-muted-foreground">
               <div className="text-center">
-                <div className="text-2xl font-bold text-foreground">15+</div>
+                <div className="text-2xl font-bold text-foreground">18+</div>
                 <div className="text-sm">Projects</div>
               </div>
               <div className="text-center">
@@ -610,7 +646,7 @@ export default function Portfolio() {
                     10+ Happy Clients
                   </Badge>
                   <Badge variant="secondary" className="px-3 py-1">
-                    15+ Projects Completed
+                    18+ Projects Completed
                   </Badge>
                   <Badge variant="secondary" className="px-3 py-1">
                     2+ Years Experience

@@ -422,8 +422,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Dhananjay Portfolio" />
-        <meta name="google-adsense-account" content="ca-pub-6246142348671168"></meta>
-         <meta name="google-adsense-account" content="ca-pub-6246142348671168">
+        <meta name="google-adsense-account" content="ca-pub-6246142348671168" />
         {/* Additional Meta Tags for Better SEO */}
         <meta name="geo.region" content="IN" />
         <meta name="geo.country" content="India" />
