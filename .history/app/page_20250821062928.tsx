@@ -203,7 +203,7 @@ export default function Portfolio() {
       description:
         "A comprehensive web platform for Sant Shri Ashram Ji Gurukul to manage courses, teachers, events, gallery, and online admissions with a public site and admin panel.",
       image: "https://ik.imagekit.io/b5qewhvhb/Sant%20Shri%20Asharamji%20Gurukul/slide-3.png?updatedAt=1751782723813",
-      tech: ["Next.js", "Node.js", "MongoDB",  "Tailwind CSS"],
+      tech: ["Next.js", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
       category: "Full-Stack",
       live: "https://amdgurukul.ashram.org/",
       featured: true,
@@ -215,18 +215,18 @@ export default function Portfolio() {
         "Professional portfolio website showcasing graphic design services, past work, client testimonials, and custom design order system with modern UI.",
       image:
         "https://ik.imagekit.io/b5qewhvhb/Sant%20Shri%20Asharamji%20Gurukul/Screenshot%202025-07-14%20164949.png?updatedAt=1752492010793",
-      tech: ["Next.js", "TypeScript","Tailwind CSS", "Framer Motion"],
+      tech: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io", "Framer Motion"],
       category: "Full-Stack",
       live: "https://akhil-graphic-first-page-frontend.vercel.app/",
       featured: true,
     },
 {
   id: 3,
-  title: "Media Toolkit",
+  title: "Dhanbyte.me",
   description:
     "Personal portfolio and showcase platform highlighting modern web development projects, placement preparation resources, and interactive tools. Built with clean UI/UX principles, it integrates dynamic components, responsive layouts, and a professional presentation of work and skills.",
   image:
-    "https://ik.imagekit.io/b5qewhvhb/Screenshot%202025-08-21%20063008.png",
+    "https://ik.imagekit.io/b5qewhvhb/Sant%20Shri%20Asharamji%20Gurukul/dhanbyte-preview.png?updatedAt=1753100000000",
   tech: ["Next.js", "React", "Tailwind CSS", "Node.js", "Express"],
   category: "Fullstack",
   live: "https://dhanbyte.me/",
@@ -240,7 +240,7 @@ export default function Portfolio() {
         "Professional business website for Shrikrishna Traders with product showcase, services information, company profile, and integrated contact system.",
       image:
         "https://ik.imagekit.io/b5qewhvhb/Sant%20Shri%20Asharamji%20Gurukul/Screenshot%202025-07-14%20170638.png?updatedAt=1752493079798",
-      tech: ["Next.js",  "Tailwind CSS", "TypeScript", "Framer Motion"],
+      tech: ["Next.js", "Prisma", "PostgreSQL", "Mapbox", "Stripe"],
       category: "Full-Stack",
       live: "https://www.shrikrishnatraders.in/",
       featured: true,
@@ -251,7 +251,7 @@ export default function Portfolio() {
       description:
         "Modern business website with comprehensive features including product showcase, services information, company profile, and integrated contact system for enhanced user experience.",
       image:
-        "https://ik.imagekit.io/b5qewhvhb/Screenshot%202025-08-21%20062354.png",
+        "https://ik.imagekit.io/b5qewhvhb/Sant%20Shri%20Asharamji%20Gurukul/Screenshot%202025-07-14%20171155.png?updatedAt=1752493365555",
       tech: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Framer Motion"],
       category: "Frontend",
       live: "https://magalmay-website-project.vercel.app/",
@@ -359,7 +359,7 @@ export default function Portfolio() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Full-Stack Developer who creates modern web applications that bring
+              Full-Stack Developer & Video Editor who creates modern web applications and cinematic videos that bring
               ideas to life
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -413,7 +413,7 @@ export default function Portfolio() {
           >
             <h2 className="text-4xl font-bold mb-4">About Me</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Passionate full-stack developer and  creating digital experiences that make a difference
+              Passionate full-stack developer and video editor creating digital experiences that make a difference
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -425,13 +425,13 @@ export default function Portfolio() {
             >
               <div className="space-y-6">
                 <p className="text-lg leading-relaxed">
-                  I'm a dedicated full-stack developer who loves bringing ideas to life
-                  through code and visual storytelling. With expertise in modern web technologies
-                  , I've successfully delivered projects for 10+ clients across various industries.
+                  I'm a dedicated full-stack developer and creative video editor who loves bringing ideas to life
+                  through code and visual storytelling. With expertise in modern web technologies and professional video
+                  editing, I've successfully delivered projects for 10+ clients across various industries.
                 </p>
                 <p className="text-lg leading-relaxed">
                   My journey combines technical excellence with creative vision. I specialize in React, Node.js, cloud
-                  technologies, and professional . I stay updated with the
+                  technologies, and professional video editing including wedding cinematography. I stay updated with the
                   latest industry trends to deliver cutting-edge solutions that exceed expectations.
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -444,14 +444,16 @@ export default function Portfolio() {
                   <Badge variant="secondary" className="px-3 py-1">
                     Full-Stack Specialist
                   </Badge>
-                  
+                  <Badge variant="secondary" className="px-3 py-1">
+                    Wedding Video Specialist
+                  </Badge>
                 </div>
                 <Button
                   variant="outline"
                   className="mt-4 bg-transparent hover:bg-accent"
                   onClick={() =>
                     window.open(
-                      "https://ik.imagekit.io/b5qewhvhb/Samira%20Alcaraz%20(2).pdf",
+                      "https://ik.imagekit.io/b5qewhvhb/Samira%20Alcaraz%20(1).pdf?updatedAt=1755736862893",
                       "_blank",
                     )
                   }
@@ -495,7 +497,7 @@ export default function Portfolio() {
           >
             <h2 className="text-4xl font-bold mb-4">My Services</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Comprehensive digital solutions from web development 
+              Comprehensive digital solutions from web development to video editing
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

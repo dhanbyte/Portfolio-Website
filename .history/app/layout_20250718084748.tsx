@@ -374,7 +374,7 @@ export const metadata: Metadata = {
         url: "https://ik.imagekit.io/b5qewhvhb/Sant%20Shri%20Asharamji%20Gurukul/WhatsApp%20Image%202025-07-14%20at%2017.21.55_a1d0f602.jpg?updatedAt=1752496047601",
         width: 1200,
         height: 630,
-        alt: "Dhananjay - Full Stack Developer  Portfolio",
+        alt: "Dhananjay - Full Stack Developer & Video Editor Portfolio",
       },
     ],
     locale: "en_US",
@@ -382,9 +382,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dhananjay - Full Stack Developer ",
+    title: "Dhananjay - Full Stack Developer & Video Editor",
     description:
-      "Professional Full Stack Developer specializing in React, Next.js, Node.js, . Expert in modern web technologies.",
+      "Professional Full Stack Developer and Video Editor specializing in React, Next.js, Node.js, and wedding video editing. Expert in modern web technologies.",
     images: [
       "https://ik.imagekit.io/b5qewhvhb/Sant%20Shri%20Asharamji%20Gurukul/WhatsApp%20Image%202025-07-14%20at%2017.21.55_a1d0f602.jpg?updatedAt=1752496047601",
     ],
@@ -417,12 +417,12 @@ export default function RootLayout({
       <head>
         {/* Additional SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#3b82f6" />
         <meta name="msapplication-TileColor" content="#3b82f6" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Dhananjay Portfolio" />
         <meta name="google-adsense-account" content="ca-pub-6246142348671168"></meta>
-         <meta name="google-adsense-account" content="ca-pub-6246142348671168">
         {/* Additional Meta Tags for Better SEO */}
         <meta name="geo.region" content="IN" />
         <meta name="geo.country" content="India" />
@@ -482,22 +482,29 @@ export default function RootLayout({
                 "React.js",
                 "Next.js",
                 "Node.js",
-                ,
+                "Wedding Videography",
               ],
               email: "dhananjay.win2004@gmail.com",
               telephone: "+919157499884",
             }),
           }}
         />
-        <link rel="icon" href="https://ik.imagekit.io/b5qewhvhb/Screenshot%202025-07-18%20093202.png?updatedAt=1752811510301" />
-
+        
       </head>
       
       <body className={inter.className}>
            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6246142348671168"
      crossOrigin="anonymous"></script>
 
- 
+<ins className="adsbygoogle"
+     style={{ display: "block" }}
+     data-ad-client="ca-pub-6246142348671168"
+     data-ad-slot="9739180605"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>

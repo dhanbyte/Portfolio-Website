@@ -451,7 +451,7 @@ export default function Portfolio() {
                   className="mt-4 bg-transparent hover:bg-accent"
                   onClick={() =>
                     window.open(
-                      "https://ik.imagekit.io/b5qewhvhb/Samira%20Alcaraz%20(2).pdf",
+                      "https://ik.imagekit.io/b5qewhvhb/Samira%20Alcaraz%20(1).pdf?updatedAt=1755736862893",
                       "_blank",
                     )
                   }

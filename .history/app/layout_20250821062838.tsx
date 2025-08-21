@@ -422,7 +422,6 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Dhananjay Portfolio" />
         <meta name="google-adsense-account" content="ca-pub-6246142348671168"></meta>
-         <meta name="google-adsense-account" content="ca-pub-6246142348671168">
         {/* Additional Meta Tags for Better SEO */}
         <meta name="geo.region" content="IN" />
         <meta name="geo.country" content="India" />
@@ -489,8 +488,7 @@ export default function RootLayout({
             }),
           }}
         />
-        <link rel="icon" href="https://ik.imagekit.io/b5qewhvhb/Screenshot%202025-07-18%20093202.png?updatedAt=1752811510301" />
-
+        
       </head>
       
       <body className={inter.className}>
